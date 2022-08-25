@@ -9,11 +9,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-/* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let backView = segue.destination as? RgbViewController else { return }
-        backView.preView?.backgroundColor = view.backgroundColor
+        backView.changeView = view.backgroundColor
+        
     }
-    */
     
    override func viewDidLoad() {
         super.viewDidLoad()

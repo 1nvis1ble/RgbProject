@@ -19,17 +19,13 @@ class RgbViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    var changeView: UIColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         preView.layer.cornerRadius = 20
-        preView.backgroundColor = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1
-        )
+        preView.backgroundColor = changeView
         
         redLabel.text = String(format: "%.2f", redSlider.value)
         greenLabel.text = String(format: "%.2f", greenSlider.value)
